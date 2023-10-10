@@ -1,6 +1,7 @@
 //importations
 const express = require('express');
 const cors = require('cors');
+// const bodyParser = require('body-parser');
 const Routes = require('./routes/routes');
 
 //config importations
@@ -13,6 +14,7 @@ const app = express();
 //middlewares
 app.use(cors()); //allow cross origin requests from any domain to access the api
 app.use(express.json()); //for parsing json data in request body
+// app.use(bodyParser());
 
 //routes
 app.use('/api', Routes);
